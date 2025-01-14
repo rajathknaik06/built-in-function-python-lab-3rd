@@ -1,0 +1,33 @@
+""" Create a module that includes a function to calculate the average of a list of numbers.
+
+
+
+Module Name: average_module
+
+Input format :
+The input consists of a list of numbers separated by spaces.
+
+Output format :
+The output displays the average of the given list of numbers.
+
+The average value is a float value rounding off into required decimal places according to the inputs."""
+
+
+#main.py
+import average_module
+
+numbers_str = input()
+numbers = [int(num) for num in numbers_str.split()]
+average = average_module.calculate_average(numbers)
+
+print(average)
+
+
+#average module.py
+def calculate_average(numbers):
+    if len(numbers) == 0:
+        return None
+
+    total = sum(numbers)
+    average = total / len(numbers)
+    return average
